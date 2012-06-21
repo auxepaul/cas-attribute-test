@@ -1,4 +1,4 @@
-#cas-attribute-test
+# cas-attribute-test
 ==================
 
 Sample CAS project that demonstrates how to retrieve attributes per service from LDAP
@@ -29,5 +29,22 @@ Sample CAS project that demonstrates how to retrieve attributes per service from
     <entry key="displayName" value="displayName" />
   </map>
   </property>
+</bean>
+```
+
+### Example registered service managed by `serviceRegistryDao` bean
+```XML
+<bean class="org.jasig.cas.services.RegexRegisteredService">
+  <property name="id" value="0" />
+  <property name="name" value="HTTPS" />
+  <property name="description" value="HTTPS services" />
+  <property name="serviceId" value="^(https?)://.*" />
+  <property name="evaluationOrder" value="1000" />
+  <property name="allowedAttributes">
+  <list>
+    <value>uid</value>
+    <value>displayName</value>
+  </list>
+  </property>    
 </bean>
 ```
