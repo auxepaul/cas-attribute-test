@@ -6,7 +6,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>CAS Attribute Test</name>
-	<description>A sample weba application that shows how to retrieve attributes from CAS</description>
+	<description>A sample web application that shows how to retrieve attributes from CAS</description>
+	<build>
+		<finalName>cas-attribute-test</finalName>
+	</build>
+	
 	<dependencies>
 
 		<dependency>
@@ -29,6 +33,7 @@
 		<dependency>
 			<groupId>org.jasig.cas.client</groupId>
 			<artifactId>cas-client-core</artifactId>
+			<!--  <version>3.3-SNAPSHOT</version> -->
 			<version>3.2.1</version>
 			<exclusions>
 				<exclusion>
